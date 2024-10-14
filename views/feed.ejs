@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Feed Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #fafafa;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: white;
+            height: 60px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #262626;
+        }
+
+        .navbar .search-box {
+            background-color: #efefef;
+            border-radius: 8px;
+            padding: 5px 15px;
+        }
+
+        .navbar .search-box input {
+            border: none;
+            background: none;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .navbar .icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar .icons i {
+            font-size: 24px;
+            color: #262626;
+            cursor: pointer;
+        }
+
+        /* Stories */
+        .stories {
+            margin-top: 80px;
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+            overflow-x: scroll;
+        }
+
+        .story {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: lightgray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .story img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Feed Posts */
+        .feed {
+            margin-top: 20px;
+            padding: 10px 20px;
+        }
+
+        .post {
+            background-color: white;
+            border: 1px solid #dbdbdb;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .post-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .post-header .user-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .post-header img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .post-header h4 {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .post-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .post-actions {
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .post-actions i {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .post-caption {
+            padding: 0 10px 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">Instagram</div>
+        <div class="search-box">
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="icons">
+            <i class="fas fa-home"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-user"></i>
+        </div>
+    </div>
+
+    <!-- Stories Section -->
+    <div class="stories">
+        <div class="story"><img src="https://via.placeholder.com/80" alt="User 1"></div>
+        <div class="story"><img src="https://via.placeholder.com/80" alt="User 2"></div>
+        <div class="story"><img src="https://via.placeholder.com/80" alt="User 3"></div>
+        <div class="story"><img src="https://via.placeholder.com/80" alt="User 4"></div>
+        <div class="story"><img src="https://via.placeholder.com/80" alt="User 5"></div>
+        <div class="story"><img src="https://via.placeholder.com/80" alt="User 6"></div>
+    </div>
+
+    <!-- Feed Section -->
+    <div class="feed">
+        <!-- Post 1 -->
+        <div class="post">
+            <div class="post-header">
+                <div class="user-info">
+                    <img src="https://via.placeholder.com/40" alt="User">
+                    <h4>User 1</h4>
+                </div>
+                <i class="fas fa-ellipsis-h"></i>
+            </div>
+            <div class="post-image">
+                <img src="https://via.placeholder.com/800x400" alt="Post Image">
+            </div>
+            <div class="post-actions">
+                <div>
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-comment"></i>
+                    <i class="fas fa-paper-plane"></i>
+                </div>
+                <i class="fas fa-bookmark"></i>
+            </div>
+            <div class="post-caption">
+                <strong>User 1</strong> This is a beautiful day!
+            </div>
+        </div>
+
+        <!-- Post 2 -->
+        <div class="post">
+            <div class="post-header">
+                <div class="user-info">
+                    <img src="https://via.placeholder.com/40" alt="User">
+                    <h4>User 2</h4>
+                </div>
+                <i class="fas fa-ellipsis-h"></i>
+            </div>
+            <div class="post-image">
+                <img src="https://via.placeholder.com/800x400" alt="Post Image">
+            </div>
+            <div class="post-actions">
+                <div>
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-comment"></i>
+                    <i class="fas fa-paper-plane"></i>
+                </div>
+                <i class="fas fa-bookmark"></i>
+            </div>
+            <div class="post-caption">
+                <strong>User 2</strong> Loving the vibes here!
+            </div>
+        </div>
+    </div>
+
+    <!-- FontAwesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
